@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: rgb(248, 241, 228);
+    perspective: 700;
+}
+.header{
+    width: 100%;
+    height: 80px;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 30;
+background-color: #73cdca;
+opacity: 0.9;
+}
+.logo{
+    margin-left: 150px;
+    height: 80px;
+
+}
+.list1{
+    list-style: none;
+    float: right;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.list1 li{
+    display: inline-block;
+    margin-right: 10px;
+ position: relative;
+ padding: 9px;
+ 
+   
+}
+
+
+.list1 li a{
+    text-decoration: none;
+    color: #071d49;
+   font-size: 21px;
+ 
+}
+.list1 li::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+   
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: height 0.1s linear;
+}
+.list1 li:hover::before{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #071d49;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 2px;
+    /* transition:height 0.1s linear */
+}
+.list1 li::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition:width 0.1s 0.2s linear;
+}
+.list1 li:hover::after{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #071d49;
+    border-left: none;
+    border-right: none;
+    
+}
+ .content a{
+    display:block ;
+    color: #071d49;
+    text-decoration: none;
+    padding: 10px 15px;
+   
+}
+ .content{
+   
+    position: absolute;
+    background-color:  rgb(244, 226, 203);
+    min-width: 390px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.765);
+    z-index: 20;
+    column-count: 2;
+    transform: scale(0);
+    margin-top: 7px;
+  
+}
+
+.home:hover .content{
+
+transition: 1s;
+transform: scale(1);
+}
+
+
+.search1{
+    border-radius: 70px;
+    border: solid #071d49;
+    background-color: #73cdca25;
+    color: #071d49;
+    width: 160px;
+    height: 30px;
+}
+.i1{
+   font-size: 20px;
+    color: #071d49;
+    height: 4px;
+    padding-left: 4px;
+}
+.i2{
+    font-size: 20px;
+    color: #071d49;
+    height: 4px;
+    padding-left: 4px;
+    position: relative;
+}
+.dot{
+    /* z-index: 2; */
+position: absolute;
+width: 15px;
+height: 15px;
+border-radius: 100%;
+background-color: antiquewhite;
+
+margin-left: 20px;
+text-align: center;
+font-size: 15px;
+padding-top: 0.5px;
+}
+.sec1{
+    height: 100vh;
+}
+.container{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.img1{
+    width: 100%;
+  margin-top: 65px;
+}
+.sec2{
+    height: 500px;
+}
+.title1{
+   text-align: center;
+
+    font-size: 40px;
+    color: #071d49;
+}
+.line{
+    background-color: #071d49;
+    width: 170px;
+    height: 3px;
+    margin: auto;
+    margin-top: 12px;
+    transition: 1s;
+}
+.line:hover{
+    width: 220px;
+}
+.container_all{
+    width: 90%;
+    margin: auto;
+}
+.item{
+    margin-top: 40px;
+    float: left;
+    width: 23%;
+    position: relative;
+    background-color:#73cdca82;
+    height: 350px;
+   
+}
+.first{
+    margin-left: 40px;
+}
+.mid1{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mid2{
+    margin-right: 10px;
+}
+
+.img3{
+width: 90%;
+margin-left: 15px;
+margin-top: 20px;
+border-radius: 100%;
+box-shadow: 1px 1px 15px 1px #16282882; ;
+}
+.info h3{
+    text-align: center;
+    color: #071d49;
+    font-weight: 600;
+    padding-top: 15px;
+    /* text-shadow:0px 0px 0.2px; */
+}
+.info h4{
+    text-align: center;
+    color: #071d49;
+    font-weight: 500;
+}
+.icons{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: solid #071d49;
+    border-radius: 100%;
+    padding: 5px;
+    text-align: center;
+    visibility: hidden;
+    transition: 0.1s;
+   
+}
+.icons a{
+    color: #071d49;
+    font-size: 25px;
+   
+}
+.item:hover .icons{
+visibility: visible;
+}
+
+.story{
+    transform: translateX(118px);
+    background-color: rgb(244, 226, 203);
+    width: 550px;
+    height: 280px;
+   
+    padding: 20px;
+    color: #071d49;
+    float: left;
+}
+.story h3{
+padding-left: 40px;
+padding-top: 2px;
+}
+.i4{
+    color: rgb(67, 50, 28);
+}
+.text{
+    padding-top: 15px;
+    font-size: 18px;
+}
+.lines{
+    text-align: right;
+}
+.lines span{
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: rgb(67, 50, 28);
+    margin-left: 10px;
+
+}
+.part{
+    width: 344px;
+    height: 280px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+   transition: 0.5s;
+}
+.part1{
+  
+    margin-left: 145px;
+    background-image: url(../images/image.jpeg);
+}
+.part2{
+    margin-left: 20px;
+    background-image: url(../images/cinnabon-perspective-2023.jpg);
+    background-position: center;
+}
+.part:hover{
+    transform: scale(1.09);
+}
+.stickers{
+    width: 90%;
+    margin: auto;
+    
+}
+.stickers_item{
+    float: left;
+   background-position: center;
+    width: 230px;
+    height: 120px;
+    padding: 4px 4px;
+    position: relative;
+    text-align: center;
+   margin-top: 90px;
+   transform: translateX(125px);
+   border-right: 2px solid rgba(67, 50, 28, 0.495);
+}
+.last{
+    border-right: 0px;
+}
+.stickers_icon{
+    background-image: url(../images/service-icon.png);
+    background-repeat: no-repeat;
+    height: 55px;
+    margin: auto;
+
+}
+.icon1{
+    background-position: center 6px;
+    transition: all 0.5s;
+    
+}
+.stickers_item:hover .icon1{
+background-position: center -86px;
+}
+.icon2{
+    background-position: center -176px;
+    transition: all 0.5s;
+  
+}
+.stickers_item:hover .icon2{
+background-position: center -270px;
+}
+.icon3{
+    background-position: center -357px;
+    transition: all 0.5s;
+    
+}
+.stickers_item:hover .icon3{
+background-position: center -457px;
+}
+.icon4{
+    background-position: center -545px;
+    transition: all 0.5s;
+   
+}
+.stickers_item:hover .icon4{
+background-position: center -639px;
+}
+.icon5{
+    background-position: center -735px;
+    transition: all 0.5s;
+   
+}
+.stickers_item:hover .icon5{
+background-position: center -825px;
+}
+.item1{
+    margin-left: 10px;
+}
+
+.sec4 h3{
+        padding-top: 60px;
+        font-weight: 600;
+}
+
+.sec5{
+    margin-top: 500px;
+}
+.sec5 h2{
+    text-align: center;
+    margin-top: 540px;
+   font-size: 30px;
+}
+
+.list2{
+    list-style: none;
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+.list2 li{
+    display: inline-block;
+   margin-left: 60px;
+   font-size: 20px;
+
+}
+.menu{
+    display: grid;
+    padding: 10px;
+    margin-left: 175px;
+  margin-top: 20px;
+    grid-column-gap: 20px;
+    grid-template-columns: 27% 27% 27%;
+      grid-template-rows: repeat(6,70%);
+}
+.menu_content{
+
+    /* background-color: #73cdca; */
+    position: relative;
+    
+  
+}
+.img6{
+    width: 100%;
+    box-shadow: 1px 1px 12px 3px rgb(209, 209, 209);
+}
+.img7{
+    width: 100%;
+    transition: 1s;
+}
+.menu_overlay{
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition:0.7s;
+}
+
+.menu_content:hover .menu_overlay{
+    transform: scaleX(1);
+    
+}
+.menu_overlay ul{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.menu_overlay ul li{
+    width: 30px;
+    height: 40px;
+    display: inline-block;
+    padding-top: 88px;
+    padding-left: 30px;
+    text-align: center;
+
+}
+.menu_overlay ul li i{
+    color:#646b78;
+    line-height:20px;
+    font-size: 15px;
+}
+.menu_overlay:hover ul li i{
+   cursor: pointer;
+}
+.menu_info ul{
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.menu_info ul li{
+    width: 30px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+
+}
+.menu_info ul li i{
+    color: rgb(255, 179, 0);
+    line-height:20px;
+    font-size: 20px;
+}
+.menu_text{
+ margin-left: 150px;
+}
+.ci{
+    padding-top: 12px;
+}
